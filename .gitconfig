@@ -1,0 +1,4 @@
+[alias]
+	fa = fetch --all
+	co = checkout
+	pl = log --graph --color --decorate --oneline --all
