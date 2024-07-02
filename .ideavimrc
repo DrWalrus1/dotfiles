@@ -1,0 +1,45 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+let mapleader = " "
+:set relativenumber
+:set number
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=20
+
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+map <leader>ca <Action>(CodeAction)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+map <C-h> <C-w><C-h> " move to left window
+map <C-j> <C-w><C-j> " move to window above
+map <C-k> <C-w><C-k> " move to window below
+map <C-l> <C-w><C-l> " move to right window
+
+map <C-b><C-h> <Action>(PreviousTab) " move to PreviousTab
+map <C-b><C-l> <Action>(NextTab) " move to NextTab
+
+sethandler <C-P> n:ide i-v:vim
