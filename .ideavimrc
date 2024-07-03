@@ -2,6 +2,7 @@
 "   the same commands as the original .vimrc configuration.
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
+let mapleader = " "
 :set relativenumber
 :set number
 " use the system clipboard
@@ -43,9 +44,15 @@ map <leader>ca <Action>(CodeAction)
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+nmap <C-l> <C-w>
 
-map <C-b><C-h> <Action>(PreviousTab) " move to PreviousTab
-map <C-b><C-l> <Action>(NextTab) " move to NextTab
+" move to PreviousTab
+map <C-b><C-h> <Action>(PreviousTab)
+" move to NextTab
+map <C-b><C-l> <Action>(NextTab)
 
 " sethandler <C-P> n:ide i-v:vim
+
+" yank all lines in the files
+:command YankAll :%yank
+map <leader>ya :YankAll<CR>
