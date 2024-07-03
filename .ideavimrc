@@ -2,20 +2,25 @@
 "   the same commands as the original .vimrc configuration.
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
-let mapleader = " "
 :set relativenumber
 :set number
+" use the system clipboard
+set clipboard+=unnamed
+
+sethandler <C-H> a:vim
+sethandler <C-J> a:vim
+sethandler <C-K> a:vim
+sethandler <C-L> a:vim
+
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
+" text window mouse-click near the start or end of the window.
 set scrolloff=20
-
 
 " Do incremental searching.
 set incsearch
 
 " Don't use Ex mode, use Q for formatting.
-map Q gq
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
@@ -34,12 +39,13 @@ map <leader>ca <Action>(CodeAction)
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
-map <C-h> <C-w><C-h> " move to left window
-map <C-j> <C-w><C-j> " move to window above
-map <C-k> <C-w><C-k> " move to window below
-map <C-l> <C-w><C-l> " move to right window
+" Ctrl-h,j,k,l move to respective window
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
 map <C-b><C-h> <Action>(PreviousTab) " move to PreviousTab
 map <C-b><C-l> <Action>(NextTab) " move to NextTab
 
-sethandler <C-P> n:ide i-v:vim
+" sethandler <C-P> n:ide i-v:vim
