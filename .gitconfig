@@ -1,4 +1,12 @@
+[user]
+	name = Luke Lynch
+	email = luke@lukelynch.io
 [alias]
 	fa = fetch --all
 	co = checkout
 	pl = log --graph --color --decorate --oneline --all
+	al = commit --amend --no-edit
+[core]
+	autocrlf = input
+[push]
+	autoSetupRemote = true
