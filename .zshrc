@@ -122,3 +122,5 @@ alias vim="nvim"
 alias repos="cd ~/repos"
 alias vimconfig="cd ~/.config/nvim && nvim ."
 alias ls="colorls"
+
+PATH="$PATH:/usr/local/netcoredbg"

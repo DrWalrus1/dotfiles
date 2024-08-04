@@ -34,17 +34,17 @@ Plug 'tpope/vim-commentary'
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
 map <leader>ca <Action>(CodeAction)
+map <leader>sf <Action>(GotoFile)
+map <leader>sg <Action>(FindInPath)
 
 "" Map <leader>d to start debug
 "map <leader>d <Action>(Debug)
 
 "" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
-" Ctrl-h,j,k,l move to respective window
-nmap <C-h> <C-w>h
+map <leader>b <Action>(ToggleLineBreakpoint)
+" Ctrl-j,k move to respective window
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
-nmap <C-l> <C-w>
 
 " move to PreviousTab
 map <C-b><C-h> <Action>(PreviousTab)
