@@ -42,14 +42,15 @@ map <leader>sg <Action>(FindInPath)
 
 "" Map \b to toggle the breakpoint on the current line
 map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>fc <Action>(ReformatCode)
 " Ctrl-j,k move to respective window
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 
 " move to PreviousTab
-map <C-b><C-h> <Action>(PreviousTab)
+map <C-h> <Action>(PreviousTab)
 " move to NextTab
-map <C-b><C-l> <Action>(NextTab)
+map <C-l> <Action>(NextTab)
 
 " sethandler <C-P> n:ide i-v:vim
 
