@@ -124,3 +124,4 @@ alias vimconfig="cd ~/.config/nvim && nvim ."
 alias ls="colorls"
 
 PATH="$PATH:/usr/local/netcoredbg"
+export PATH="/opt/homebrew/opt/llvm/bim:$PATH"

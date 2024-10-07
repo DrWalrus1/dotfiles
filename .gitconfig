@@ -1,6 +1,7 @@
 [user]
 	name = Luke Lynch
 	email = luke@lukelynch.io
+	signingkey = /Users/lukelynch/.ssh/id_rsa.pub
 [alias]
 	fa = fetch --all
 	co = checkout
@@ -10,3 +11,7 @@
 	autocrlf = input
 [push]
 	autoSetupRemote = true
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
