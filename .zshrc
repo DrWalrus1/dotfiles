@@ -125,3 +125,10 @@ alias ls="colorls"
 
 PATH="$PATH:/usr/local/netcoredbg"
 export PATH="/opt/homebrew/opt/llvm/bim:$PATH"
+
+# bun completions
+[ -s "/Users/lukelynch/.bun/_bun" ] && source "/Users/lukelynch/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
