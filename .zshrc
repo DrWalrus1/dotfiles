@@ -129,6 +129,11 @@ export PATH="/opt/homebrew/opt/llvm/bim:$PATH"
 # bun completions
 [ -s "/Users/lukelynch/.bun/_bun" ] && source "/Users/lukelynch/.bun/_bun"
 
+nvim_config_session_name="nvim_config"
+tmux has-session -t "$nvim_config_session_name" 2>/dev/null 
+if [ $? -ne 0 ]; then
+  tmux new-session -d -s "$nvim_config_session_name" -c "/Users/lukelynch/.dotfiles/.config/nvim/"
+fi
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
