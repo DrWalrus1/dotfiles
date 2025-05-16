@@ -7,6 +7,9 @@
 	co = checkout
 	pl = log --graph --color --decorate --oneline --all
 	al = commit --amend --no-edit
+	pam = !git pull && git merge -
+	# ! in front of an alias runs it as a regular terminal command
+	fuckit = reset --hard
 [core]
 	autocrlf = input
 [push]
