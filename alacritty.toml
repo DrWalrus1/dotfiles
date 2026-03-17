@@ -1,0 +1,27 @@
+[general]
+working_directory = "C:/Users/1534943/repos"
+import = [ "C:/Users/1534943/tools/tokyo-night-alacritty-theme/tokyo-night.toml"] # clone yourself
+
+[window]
+padding = { x = 10, y = 10 }
+dynamic_title = true
+opacity = 0.95 # Slight transparency for the aesthetic
+
+[font]
+size = 11.0
+normal = { family = "JetBrainsMonoNL NFP", style = "Regular" } # Need to install nerd font yourself
+
+[colors.primary]
+background = "#1d1f21"
+foreground = "#c5c8c6"
+
+[terminal.shell]
+# Replace the path below if you installed Git in a custom location
+program = "C:\\Program Files\\Git\\bin\\bash.exe"
+args = ["--login", "-i"]
+
+[env]
+# This ensures some programs know they are running in a modern terminal
+TERM = "xterm-256color"
+
+[terminal]
